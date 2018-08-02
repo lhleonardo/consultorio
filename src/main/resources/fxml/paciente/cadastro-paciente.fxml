@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="596.0" prefWidth="706.0" stylesheets="@../../css/reset.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <bottom>
+      <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0" snapToPixel="false" BorderPane.alignment="CENTER">
+         <items>
+            <JFXButton cancelButton="true" prefHeight="33.0" prefWidth="90.0" styleClass="button-success" text="Salvar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton cancelButton="true" prefHeight="33.0" prefWidth="90.0" styleClass="button-danger" text="Excluir" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" cancelButton="true" prefHeight="33.0" prefWidth="90.0" styleClass="button-info" text="Pesquisar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+         </items>
+      </ToolBar>
+   </bottom>
+   <center>
+      <JFXTabPane tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+         <tabs>
+            <Tab text="Dados principais">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXTextField layoutX="14.0" layoutY="39.0" prefHeight="30.0" prefWidth="679.0" promptText="Digite o nome completo do paciente aqui" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0" />
+                        <Text layoutX="14.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome do Paciente" AnchorPane.leftAnchor="14.0" />
+                        <Text layoutX="14.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de Nascimento" AnchorPane.leftAnchor="14.0" />
+                        <JFXDatePicker defaultColor="#2fc0dd" layoutX="14.0" layoutY="106.0" prefHeight="28.0" prefWidth="205.0" promptText="dd/mm/yyyy" AnchorPane.leftAnchor="14.0" />
+                        <Text layoutX="229.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Naturalidade" AnchorPane.leftAnchor="229.0" AnchorPane.rightAnchor="392.99853515625" />
+                        <JFXTextField layoutX="228.0" layoutY="110.0" prefHeight="23.0" prefWidth="286.0" promptText="Ex: paulista, mineiro, etc." AnchorPane.leftAnchor="228.0" AnchorPane.rightAnchor="192.0" />
+                        <Text layoutX="525.58203125" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sexo" AnchorPane.rightAnchor="148.0888671875" />
+                        <JFXComboBox layoutX="525.0" layoutY="110.0" prefHeight="23.0" prefWidth="167.0" promptText="Selecione..." AnchorPane.rightAnchor="14.0" />
+                        <JFXTextField layoutX="14.0" layoutY="177.0" prefHeight="23.0" prefWidth="204.0" promptText="Informe o cpf aqui" AnchorPane.leftAnchor="14.0" />
+                        <Text layoutX="14.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF" AnchorPane.leftAnchor="14.0" />
+                        <JFXTextField layoutX="227.0" layoutY="176.0" prefHeight="23.0" prefWidth="228.0" promptText="Informe o RG aqui" />
+                        <Text layoutX="229.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RG" AnchorPane.leftAnchor="229.0" AnchorPane.rightAnchor="457.224609375" />
+                        <JFXTextField layoutX="471.0" layoutY="175.0" prefHeight="23.0" prefWidth="221.0" promptText="Ex: SSP RO" AnchorPane.leftAnchor="471.0" />
+                        <Text layoutX="471.82568359375" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Emissor" AnchorPane.leftAnchor="471.82568359375" />
+                        <Text layoutX="14.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="separator" text="Parentesco e Responsáveis" AnchorPane.leftAnchor="14.0">
+                           <font>
+                              <Font name="Roboto Light" size="12.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutX="242.0" layoutY="234.0" prefHeight="11.0" prefWidth="454.0" AnchorPane.leftAnchor="242.0" AnchorPane.rightAnchor="10.0" />
+                        <JFXTextField layoutX="16.0" layoutY="276.0" prefHeight="23.0" prefWidth="467.0" promptText="Informe o nome do pai aqui" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="223.0" />
+                        <Text layoutX="16.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome do Pai" AnchorPane.leftAnchor="16.0" />
+                        <JFXTextField layoutX="495.0" layoutY="276.0" prefHeight="23.0" prefWidth="200.0" promptText="Informe a profissão" AnchorPane.rightAnchor="11.0" />
+                        <Text layoutX="497.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profissão" AnchorPane.rightAnchor="146.36328125" />
+                        <JFXTextField layoutX="14.0" layoutY="340.0" prefHeight="23.0" prefWidth="467.0" promptText="Informe o cpf aqui" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="225.0" />
+                        <Text layoutX="14.0" layoutY="336.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome da Mãe" AnchorPane.leftAnchor="14.0" />
+                        <JFXTextField layoutX="493.0" layoutY="340.0" prefHeight="23.0" prefWidth="200.0" promptText="Informe a profissão" AnchorPane.rightAnchor="13.0" />
+                        <Text layoutX="493.0" layoutY="335.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profissão" AnchorPane.rightAnchor="150.36328125" />
+                        <Text layoutX="12.0" layoutY="402.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="separator" text="Escolaridade" AnchorPane.leftAnchor="14.0">
+                           <font>
+                              <Font name="Roboto Light" size="12.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutX="124.0" layoutY="392.0" prefHeight="11.0" prefWidth="572.0" AnchorPane.leftAnchor="124.0" AnchorPane.rightAnchor="10.0" />
+                        <JFXTextField layoutX="13.0" layoutY="433.0" prefHeight="23.0" prefWidth="467.0" promptText="Informe o nome da escola aqui" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="226.0" />
+                        <Text layoutX="13.0" layoutY="429.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome da Escola" />
+                        <JFXTextField layoutX="496.0" layoutY="433.0" prefHeight="23.0" prefWidth="193.0" promptText="Informe a série que está cursando" AnchorPane.rightAnchor="17.0" />
+                        <Text layoutX="496.9951171875" layoutY="429.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Série atual" AnchorPane.rightAnchor="140.07666015625" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Detalhes">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXTextField layoutX="14.0" layoutY="68.0" prefHeight="23.0" prefWidth="204.0" promptText="Informe o CEP aqui" AnchorPane.leftAnchor="14.0" />
+                        <Text layoutX="14.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CEP" AnchorPane.leftAnchor="14.0" />
+                        <JFXTextField layoutX="238.0" layoutY="68.0" prefHeight="23.0" prefWidth="453.0" promptText="Incluir as informações de relevância" AnchorPane.leftAnchor="238.0" AnchorPane.rightAnchor="15.0" />
+                        <Text layoutX="238.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logradouro" AnchorPane.leftAnchor="238.0" AnchorPane.rightAnchor="391.8720703125" />
+                        <Text layoutX="12.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Número" />
+                        <Text layoutX="13.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bairro" />
+                        <Text layoutX="149.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Complemento" AnchorPane.leftAnchor="149.0" />
+                        <JFXTextField layoutX="14.0" layoutY="132.0" prefHeight="23.0" prefWidth="114.0" promptText="Ex: 101" />
+                        <JFXTextField layoutX="12.0" layoutY="198.0" prefHeight="23.0" prefWidth="175.0" promptText="Informe o bairro aqui" />
+                        <JFXTextField layoutX="148.0" layoutY="132.0" prefHeight="23.0" prefWidth="545.0" promptText="Informe o complemento aqui" AnchorPane.leftAnchor="148.0" AnchorPane.rightAnchor="13.0" />
+                        <Text layoutX="198.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estado" />
+                        <JFXComboBox layoutX="198.0" layoutY="198.0" prefHeight="23.0" prefWidth="129.0" promptText="UF" />
+                        <Text layoutX="340.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cidade" />
+                        <JFXTextField layoutX="340.0" layoutY="198.0" prefHeight="23.0" prefWidth="349.0" promptText="Informe a cidade aqui" />
+                        <Text layoutX="13.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="separator" text="Endereço Atual">
+                           <font>
+                              <Font name="Roboto Light" size="12.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutX="135.0" layoutY="27.0" prefHeight="11.0" prefWidth="560.0" AnchorPane.leftAnchor="135.0" AnchorPane.rightAnchor="11.0" />
+                        <Text layoutX="12.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="separator" text="Informações para Contato">
+                           <font>
+                              <Font name="Roboto Light" size="12.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutX="216.0" layoutY="256.0" prefHeight="11.0" prefWidth="479.0" AnchorPane.leftAnchor="216.0" AnchorPane.rightAnchor="11.0" />
+                        <Text layoutX="16.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail" />
+                        <JFXTextField layoutX="14.0" layoutY="296.0" prefHeight="23.0" prefWidth="676.0" promptText="Informe o endereço de e-mail aqui" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="16.0" />
+                        <Text layoutX="16.0" layoutY="347.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone" />
+                        <JFXTextField layoutX="14.0" layoutY="349.0" prefHeight="23.0" prefWidth="237.0" promptText="Informe o complemento aqui" />
+                        <Text layoutX="271.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Celular" />
+                        <JFXTextField layoutX="270.0" layoutY="348.0" prefHeight="23.0" prefWidth="260.0" promptText="Informe o complemento aqui" />
+                        <Text layoutX="11.0" layoutY="405.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="separator" text="Plano de Saúde">
+                           <font>
+                              <Font name="Roboto Light" size="12.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutX="135.0" layoutY="398.0" prefHeight="11.0" prefWidth="559.0" AnchorPane.leftAnchor="135.0" AnchorPane.rightAnchor="12.0" />
+                        <JFXToggleButton layoutX="12.0" layoutY="409.0" text="Possui plano de saude?" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </center>
+   <padding>
+      <Insets top="3.0" />
+   </padding>
+</BorderPane>

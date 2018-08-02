@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/reset.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.crescer.gerenciador.controller.MainController">
+	<left>
+		<VBox fx:id="menuLateral" prefHeight="400.0" prefWidth="103.0" styleClass="menu-navbar" BorderPane.alignment="CENTER">
+			<children>
+				<ImageView fx:id="imagemLogo" fitHeight="99.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../images/default-user.png" />
+					</image>
+				</ImageView>
+				<JFXListView fx:id="opcoesMenu" prefHeight="232.0" prefWidth="97.0" style="-fx-border-width: 0px;">
+					<Label id="linkPaciente" fx:id="linkPaciente" prefHeight="18.0" prefWidth="66.0" text="Pacientes" wrapText="true">
+					</Label>
+
+				</JFXListView>
+			</children>
+		</VBox>
+	</left>
+	<center>
+		<BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+			<top>
+				<HBox fx:id="menuSuperior" alignment="TOP_RIGHT" prefHeight="41.0" prefWidth="497.0" styleClass="status-bar" BorderPane.alignment="CENTER">
+					<children>
+						<Label fx:id="path" text="Label" textAlignment="CENTER">
+							<HBox.margin>
+								<Insets right="10.0" top="12.0" />
+							</HBox.margin>
+						</Label>
+					</children>
+				</HBox>
+			</top>
+			<center>
+				<JFXTabPane fx:id="viewPane" tabClosingPolicy="ALL_TABS" BorderPane.alignment="CENTER" />
+			</center>
+		</BorderPane>
+	</center>
+</BorderPane>

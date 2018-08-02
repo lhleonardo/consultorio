@@ -1,0 +1,78 @@
+@font-face {
+	font-family: "Roboto Light";
+	src: url('../fonts/Roboto-Light.ttf');
+}
+
+@font-face {
+	font-family: "Roboto";
+	src: url("../fonts/Roboto-Regular.ttf");
+}
+
+.root {
+	-fx-font-family: "Roboto Light" sans-serif;
+}
+
+Text {
+	-fx-font-size: 15.0px;
+}
+
+Text.separator {
+	-fx-font-family: "Roboto" sans-serif;
+	-fx-font-size: 17.0px;
+}
+
+.button-danger {
+	-fx-background-color: #b71c1c;
+}
+
+.button-primary {
+	-fx-background-color: #0d47a1;
+	-fx-text-fill: white;
+}
+
+.button-secondary {
+	-fx-background-color: #424242;
+}
+
+.button-success {
+	-fx-background-color: #4caf50;
+}
+
+.button-warning {
+	-fx-background-color: #ffc107;
+}
+
+.button-info {
+	-fx-font-family: "Roboto" sans-serif;
+	-fx-background-color: #2196f3;
+	-fx-text-fill: white;
+}
+
+.status-bar {
+	-fx-background-color:  #4A5BFF;
+}
+
+.menu-navbar {
+	-fx-background-color:  #4A5BFF;
+	-fx-border-width: 3.0px;
+	-fx-border-color: #4A5BFF;
+}
+
+.menu-navbar * {
+	-fx-background-color: inherit;
+}
+
+.menu-navbar Label, .status-bar Label {
+	-fx-font-family: "Roboto";
+	-fx-text-fill: white;
+	-fx-font-size: 1.2em;
+	-fx-text-fill: white;
+}
+
+.title {
+	-fx-font-size: 2.0em;
+}
+
+.copyright {
+	-fx-font-size: 0.9em;
+}
