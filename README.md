@@ -4,3 +4,5 @@ Software para gerenciar o Espaço Crescer, mas poderá ser utilizado em qualquer
 Desenvolvido com a linguagem Java, utilizando o framework Spring Boot.
 
 Interface gráfica construída com a suíte JavaFX, com as modificações do projeto JFoenix.
+
+Persistência de dados gerenciada via JPA, com o spring-boot-starter-jpa. 
