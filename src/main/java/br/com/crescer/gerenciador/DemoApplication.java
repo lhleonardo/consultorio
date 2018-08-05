@@ -26,7 +26,6 @@ public class DemoApplication extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			System.out.println("Agora tô aqui dentro...");
 			FXMLLoader loader = loaderFactory.getLoader("/fxml/login.fxml");
 			
 			Pane load = loader.load();

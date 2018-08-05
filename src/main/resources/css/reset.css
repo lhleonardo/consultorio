@@ -21,8 +21,15 @@ Text.separator {
 	-fx-font-size: 17.0px;
 }
 
+Button {
+	-fx-font-family: "Roboto" sans-serif;
+	-fx-text-fill: white;
+}
+
 .button-danger {
 	-fx-background-color: #b71c1c;
+		-fx-font-family: "Roboto" sans-serif;
+	-fx-text-fill: white;
 }
 
 .button-primary {
@@ -32,20 +39,21 @@ Text.separator {
 
 .button-secondary {
 	-fx-background-color: #424242;
+	-fx-text-fill: white;
 }
 
 .button-success {
 	-fx-background-color: #4caf50;
+	-fx-text-fill: white;
 }
 
 .button-warning {
 	-fx-background-color: #ffc107;
+	-fx-text-fill: white;
 }
 
 .button-info {
-	-fx-font-family: "Roboto" sans-serif;
 	-fx-background-color: #2196f3;
-	-fx-text-fill: white;
 }
 
 .status-bar {

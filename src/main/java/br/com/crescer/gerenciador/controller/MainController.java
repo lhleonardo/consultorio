@@ -10,11 +10,14 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.ResourceBundle;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
 import com.jfoenix.controls.JFXListView;
 import com.jfoenix.controls.JFXTabPane;
 
+import br.com.crescer.gerenciador.util.SpringFXMLLoader;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -23,6 +26,7 @@ import javafx.scene.control.Tab;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 
 @Target(ElementType.FIELD)
@@ -34,9 +38,13 @@ import javafx.scene.layout.VBox;
 }
 
 @Controller
+@Scope(scopeName = "singleton")
 public class MainController implements Initializable {
 
 	private HashMap<String, Tab> janelasAbertas;
+
+	@Autowired
+	private SpringFXMLLoader loaderFactory;
 
 	@FXML
 	private VBox menuLateral;
@@ -57,7 +65,10 @@ public class MainController implements Initializable {
 	private JFXTabPane viewPane;
 
 	@FXML
-	@AbrirTela(nome = "Cadastro de Pacientes", arquivo = "/fxml/paciente/cadastro-paciente.fxml")
+	private StackPane stack;
+
+	@FXML
+	@AbrirTela(nome = "Controle de Pacientes", arquivo = "/fxml/paciente/listagem-paciente.fxml")
 	private Label linkPaciente;
 
 	@Override
@@ -65,10 +76,6 @@ public class MainController implements Initializable {
 		janelasAbertas = new HashMap<>();
 		path.setText("Você está conectado como: Leonardo Braz");
 		configuraAbertura();
-		configuraExclusao();
-	}
-
-	private void configuraExclusao() {
 	}
 
 	private void configuraAbertura() {
@@ -85,9 +92,13 @@ public class MainController implements Initializable {
 			AbrirTela annotation = campo.getAnnotation(AbrirTela.class);
 
 			if (!janelasAbertas.containsKey(annotation.arquivo())) {
-				Pane conteudo = FXMLLoader.load(MainController.class.getResource(annotation.arquivo()));
+				FXMLLoader loader = loaderFactory.getLoader(annotation.arquivo());
+				Pane conteudo = loader.load();
 
 				Tab tab = new Tab(annotation.nome(), conteudo);
+				tab.setOnClosed(evt -> {
+					this.janelasAbertas.remove(annotation.arquivo());
+				});
 
 				this.viewPane.getTabs().add(tab);
 
@@ -102,6 +113,14 @@ public class MainController implements Initializable {
 			System.err.println("Não foi encontrado o arquivo FXML para abrir " + idLink);
 			e.printStackTrace();
 		}
+	}
+
+	public StackPane stackPane() {
+		return this.stack;
+	}
+
+	public Tab getCurrentTab() {
+		return viewPane.getSelectionModel().getSelectedItem();
 	}
 
 }

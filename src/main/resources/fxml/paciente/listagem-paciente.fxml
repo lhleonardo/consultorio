@@ -7,25 +7,28 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Text?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../css/reset.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
-   <center>
-      <JFXTreeTableView prefHeight="263.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
-   </center>
-   <top>
-      <AnchorPane prefHeight="70.0" prefWidth="659.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
-         <children>
-            <JFXTextField fx:id="txtFiltro" labelFloat="true" layoutX="14.0" layoutY="25.0" prefHeight="23.0" prefWidth="309.0" promptText="Filtro de pesquisa..." AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="277.0" />
-            <JFXButton fx:id="btnNovoPaciente" layoutX="442.0" layoutY="14.0" prefHeight="38.0" prefWidth="170.0" styleClass="button-info" text="Novo paciente" AnchorPane.rightAnchor="14.0" />
-         </children>
-      </AnchorPane>
-   </top>
-   <bottom>
-      <AnchorPane prefHeight="28.0" prefWidth="600.0" BorderPane.alignment="CENTER">
-         <children>
-            <Text layoutX="9.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantidade de pacientes:" />
-            <Text fx:id="txtQtdPacientes" layoutX="178.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-         </children>
-      </AnchorPane>
-   </bottom>
-</BorderPane>
+<AnchorPane xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.crescer.gerenciador.controller.paciente.ListagemPacienteController">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../css/reset.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <JFXTreeTableView fx:id="tbRegistros" prefHeight="263.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+         </center>
+         <top>
+            <AnchorPane prefHeight="70.0" prefWidth="659.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXTextField fx:id="txtFiltro" labelFloat="true" layoutX="14.0" layoutY="25.0" prefHeight="23.0" prefWidth="309.0" promptText="Filtro de pesquisa..." AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="277.0" />
+                  <JFXButton fx:id="btnNovoPaciente" layoutX="442.0" layoutY="14.0" onAction="#btnNovoPacienteAction" prefHeight="38.0" prefWidth="170.0" styleClass="button-info" text="Novo paciente" textFill="WHITE" AnchorPane.rightAnchor="14.0" />
+               </children>
+            </AnchorPane>
+         </top>
+         <bottom>
+            <AnchorPane prefHeight="28.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Text layoutX="9.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantidade de pacientes:" />
+                  <Text fx:id="txtQtdPacientes" layoutX="178.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+               </children>
+            </AnchorPane>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
